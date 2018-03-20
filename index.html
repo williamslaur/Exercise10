@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Exercise 6</title>
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+	<h2>Part 1</h2>
+<div id="partOne">asdad</div>
+<hr/>
+<h2>Part 2</h2>
+<div id="partTwo"></div>
+<hr/>
+
+<h2>Part 3</h2>
+<div id="partThree"></div>
+<hr/>
+
+<h2>Part 4</h2>
+<div id="partFour"></div>
+<hr/>
+
+<h2>Part 5</h2>
+<div id="partFive"></div>
+<hr/>
+
+<h2>Part 6</h2>
+<div id="part6Result"></div>
+<div id="part6Number"></div>
+<hr/>
+
+<h2>Part 7</h2>
+<div id="part7Number"></div>
+<div id="part7Result"></div>
+<hr />
+
+<div class="bonus" style="height:100px;width:200px;">
+		<p>The best way to loop through an array is using a standard for loop:</p>
+		<p id="numbers"></p>
+</div>
+
+</body>
+
+
+<script>
+	var myname = "Laura";
+   var elm = document.getElementById('partOne');
+
+   console.log(elm.innerHTML); //Outputs 'asdad'
+
+   elm.innerHTML = myname; //Update's the element
+
+   console.log(elm.innerHTML); //Outputs 'Laura'
+
+</script>
+
+<script>
+	var foo = "This is not an integer";
+	var elm = document.getElementById('partTwo');
+
+	console.log(elm.innerHTML);
+
+	elm.innerHTML = foo; //Update's the element
+
+	console.log(elm.innerHTML); //Outputs 'This is not an integer'
+</script>
+
+<script>
+	var partThree = ((5+10)*14)-25;
+	var elm = document.getElementById('partThree');
+
+	console.log(elm.innerHTML); 
+
+	elm.innerHTML = partThree; //Update's the element
+
+	console.log(elm.innerHTML);
+</script>
+
+<script>
+	//Part Four
+	var lName = "Williams";
+	var fName = "Laura";
+	var fullName = fName + " " + lName;
+	var elm = document.getElementById('partFour');
+
+	console.log(elm.innerHTML); 
+
+	elm.innerHTML = fullName; //Update's the element
+
+</script>
+ 
+<script>
+	//Part Five
+	var myHtml= "";
+	myHtml += '<h2>Title</h2>';
+	myHtml += '<p>Lorem ipsum dolor</p>';
+	myHtml += '<h3>Pellentesque habitant morbi</h3>';
+	myHtml += '<p>Morbi in sem quis dui placerat ornare. </p>';
+	var elm = document.getElementById('partFive');
+
+	console.log(elm.innerHTML); 
+
+	elm.innerHTML = myHtml; //Update's the element
+	
+</script>
+
+<script>
+	//Part 6
+	var part6Number = getRandomNumber(); 
+	var part6Result = 'is less than 50';
+	if (part6Number > 50) {part6Result = "Above 50";}
+	else {var part6Result = "Equal or Less than 50";}
+	document.getElementById("part6Number").innerHTML = part6Number;
+	document.getElementById("part6Result").innerHTML = part6Result;
+
+function getRandomNumber() {
+  return Math.floor(Math.random() * (100 - 1)) + 1;
+}
+</script>
+
+
+<script>
+	//Part 7
+	var part7Number = getRandomNumber();
+	var part7Result = 'Above 75';
+	if (part7Number < 25) {part7Result = 'Below 25';}
+	else if (part7Number >= 25 && part7Number < 50) {part7Result = "Between 25 and 50";}
+	else if (part7Number >= 50 && part7Number < 75) {part7Result = "Between 50 and 75";};
+	document.getElementById("part7Number").innerHTML = part7Number;
+	document.getElementById("part7Result").innerHTML = part7Result;
+	
+function getRandomNumber() {
+  return Math.floor(Math.random() * (100 - 1)) + 1;
+}
+</script>
+<script>
+	//Bonus Question
+	var numbers, nLen, text, i; 
+	numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	nLen = numbers.length;
+	text = "<ul>";
+	for (i = 0; i < nLen; i++) {
+    text += "<li>" + numbers[i] + "</li>";
+	text += "</ul>";
+document.getElementById("numbers").innerHTML = text;
+}
+
+
+</script>
+	
+
+
+
+
+</html>
